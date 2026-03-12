@@ -36,13 +36,13 @@ public class WeatherService {
 
     public List<Weather> getWeathers(String cityName, String region) {
         if (cityName != null && region != null) {
-            return weatherRepository.findByCityNameAndRegion(cityName, region);
+            return weatherRepository.findByCityNameAndRegionIgnoreCase(cityName, region);
         }
         if (cityName != null) {
-            return weatherRepository.findByCityName(cityName);
+            return weatherRepository.findByCityNameIgnoreCase(cityName);
         }
         if (region != null) {
-            return weatherRepository.findByRegion(region);
+            return weatherRepository.findByRegionIgnoreCase(region);
         }
         return weatherRepository.findAll();
     }

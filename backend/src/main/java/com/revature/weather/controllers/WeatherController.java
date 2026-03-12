@@ -21,6 +21,7 @@ public class WeatherController {
 
     @GetMapping("/weather")
     public ResponseEntity<List<Weather>> getAllWeathers(@RequestParam(required = false) String cityName, @RequestParam(required = false) String region) {
+        System.out.println(cityName + " " + region);
         List<Weather> weatherList = weatherService.getWeathers(cityName, region);
         return ResponseEntity.ok(weatherList);
     }

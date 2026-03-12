@@ -1,0 +1,12 @@
+/* src/components/WeatherThemes.css */
+.cold-theme {
+  background-color: #d0ebff; /* Soft Blue */
+  color: #003a6b; /* Dark Blue Text */
+  transition: all 0.3s ease; /* Makes the color change smooth */
+}
+
+.warm-theme {
+  background-color: #ffe8cc; /* Soft Orange */
+  color: #733a00; /* Dark Orange Text */
+  transition: all 0.3s ease;
+}
